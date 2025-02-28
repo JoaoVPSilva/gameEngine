@@ -63,8 +63,8 @@ public class Entity {
 		this.sprite = sprite;
 	}
 
-    public void tick(Graphics g) {
-        System.out.println("hello wolrd");
+    public void tick() {
+//        System.out.println("hello wolrd");
     }
 
     public void render(Graphics g) {
