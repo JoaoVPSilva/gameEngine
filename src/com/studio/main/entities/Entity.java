@@ -1,5 +1,6 @@
 package com.studio.main.entities;
 
+import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 public class Entity {
@@ -61,4 +62,12 @@ public class Entity {
 	public void setSprite(BufferedImage sprite) {
 		this.sprite = sprite;
 	}
+
+    public void tick(Graphics g) {
+        System.out.println("hello wolrd");
+    }
+
+    public void render(Graphics g) {
+        g.drawImage(sprite, this.getX(), this.getY(), null);
+    }
 }

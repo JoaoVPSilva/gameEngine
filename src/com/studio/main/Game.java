@@ -1,10 +1,12 @@
 package com.studio.main;
 
+import com.studio.main.entities.Entity;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 import java.sql.SQLOutput;
+import java.util.ArrayList;
 
 public class Game extends Canvas implements  Runnable {
 
@@ -16,10 +18,12 @@ public class Game extends Canvas implements  Runnable {
     private final int SCALE = 3;
 
     private BufferedImage image;
+    public ArrayList<Entity> entities;
 
     public Game(){
         setPreferredSize(new Dimension(WIDTH*SCALE, HEIGHT*SCALE));
         initFrame();
+        entities = new ArrayList<Entity>();
         image = new BufferedImage(WIDTH,HEIGHT, BufferedImage.TYPE_INT_RGB);
     }
 
